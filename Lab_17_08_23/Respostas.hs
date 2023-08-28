@@ -77,3 +77,49 @@ c)
 
 Aqui temos o tipo erro de tipos incompativeis, a funcao media espera dois valores Float, mas recebeu dois valores Int.
 -}
+
+--4
+{-
+a) Esta correto, pois esta dentro da regras de sintaxe do Haskell, no que diz respeito a nomeclatura de funcoes.
+
+b) Esta incorreto, no Haskell funcoes e variaveis nao devem conter numeros como seu primeiro caracter.
+
+c) Esta incorreto, no Haskell somento tipos e variaveis podem ter seu primeiro caracter em caps lock.
+
+d) Esta incorreto, Haskell nao tolera caracteres especiais na hora de declarar funcoes e variaveis
+
+e) Mesmo erro da questao anterior, porem salvo a parte de que somente variaveis e tipos podem ter o primeiro caracter em caps lock.
+-}
+
+--5
+areaRetangulo :: Int -> Int -> Int
+areaRetangulo base altura = base * altura
+
+--6
+areaQuadrado :: Int -> Int
+areaQuadrado lado = lado * lado
+
+--7
+areaTriangulo :: Float -> Float -> Float
+areaTriangulo base altura = (base * altura) / 2
+
+--8
+areaTrapezio :: Float -> Float -> Float -> Float
+areaTrapezio base baseM altura = ((baseM + base) * altura) / 2
+
+--9
+areaCirculo :: Float -> Float
+areaCirculo raio = (2 * pi) * raio
+
+--10
+areaCoroa :: Float -> Float -> Float
+areaCoroa area1 area2 = (if area1 > area2 then
+                        (pi * (area1 ^ 2)) - (pi * (area2 ^ 2)) else
+                        (pi * (area2 ^ 2)) - (pi * (area1 ^ 2)))
+
+--11
+volumeCubo :: Float -> Float
+volumeCubo aresta = aresta ^ 3
+
+--12
+
