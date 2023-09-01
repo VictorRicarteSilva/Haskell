@@ -181,3 +181,25 @@ fahrenheitParaKelvin :: Float -> Float
 fahrenheitParaKelvin fahrenheit = fahrenheitParaCelsius fahrenheit + 272.15
 
 --25
+kilometroHoraParaMetroSegundo :: Float -> Float
+kilometroHoraParaMetroSegundo velocidade = velocidade / 3.6
+
+--26
+formulaLogica01 :: Bool -> Bool -> Bool
+formulaLogica01 p q = (p || q) && not(p && q)
+
+--27
+formulaLogica02 :: Bool -> Bool -> Bool -> Bool
+formulaLogica02 p q r = (p || q) && r
+
+--28
+formulaLogica03 :: Bool -> Bool -> Bool -> Bool
+formulaLogica03 p q r = (p && q) || not(p && r)
+
+--29
+formulaLogica04 :: Bool -> Bool -> Bool -> Bool -> Bool
+formulaLogica04 p q r s = p || (q && r) || not s
+
+--30
+formulaLogica05 :: Bool -> Bool -> Bool -> Bool -> Bool
+formulaLogica05 p q r s = not(p || q) && (r || s) && not r
