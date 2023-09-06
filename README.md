@@ -3,3 +3,4 @@ Repositório com objetivo de deixar guardado os exercícios propostos na matéri
 
 * Lista01 - feita;
 * Lista02 - feita;
+* Lista03 - iniciada;
