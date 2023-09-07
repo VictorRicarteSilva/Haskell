@@ -101,5 +101,78 @@ terceiro :: [Int] -> Int
 terceiro lista = head(tail(tail lista))
 
 --03
+--a)
 ultimo :: [Int] -> Int
 ultimo lista = head (reverse lista)
+
+--b)
+inicio :: [Int] -> [Int]
+inicio lista = reverse(tail(reverse lista))
+
+--04
+iniciais :: [Char] -> [Char] -> (Char, Char)
+iniciais primeiro segundo = (head primeiro, head segundo)
+
+--05
+{-
+ghci> 1:[2,3,4]
+[1,2,3,4]
+
+ghci> 1:2:3:4:[]
+[1,2,3,4]
+
+ghci> [1,2,3]:[4..7]
+
+<interactive>:5:1: error:
+    * No instance for (Num [Integer]) arising from a use of `it'
+    * In the first argument of `print', namely `it'
+      In a stmt of an interactive GHCi command: print it
+
+ghci> 1:['a','b']
+
+<interactive>:6:1: error:
+    * No instance for (Num Char) arising from the literal `1'
+    * In the first argument of `(:)', namely `1'
+      In the expression: 1 : ['a', 'b']
+      In an equation for `it': it = 1 : ['a', 'b']
+      
+ghci> "a":"bCe"
+
+<interactive>:7:5: error:
+    * Couldn't match type `Char' with `[Char]'
+      Expected: [String]
+        Actual: String
+    * In the second argument of `(:)', namely `"bCe"'
+      In the expression: "a" : "bCe"
+      In an equation for `it': it = "a" : "bCe"
+
+ghci> 'a':'b'
+
+<interactive>:8:5: error:
+    * Couldn't match expected type `[Char]' with actual type `Char'
+    * In the second argument of `(:)', namely 'b'
+      In the expression: 'a' : 'b'
+      In an equation for `it': it = 'a' : 'b'
+
+ghci> 'a':"b"
+"ab"
+
+ghci> [1,4,7] ++ 4:[5:[]]
+
+<interactive>:10:1: error:
+    * No instance for (Num [Integer]) arising from a use of `it' 
+    * In the first argument of `print', namely `it'
+      In a stmt of an interactive GHCi command: print it
+
+ghci> [True, True:[]]
+
+<interactive>:11:8: error:
+    * Couldn't match expected type `Bool' with actual type `[Bool]'
+    * In the expression: True : []
+      In the expression: [True, True : []]
+      In an equation for `it': it = [True, True : []]
+
+ghci> True:[True, False]
+[True,True,False]
+-}
+
